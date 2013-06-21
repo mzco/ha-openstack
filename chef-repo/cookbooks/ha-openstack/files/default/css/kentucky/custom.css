@@ -1,0 +1,75 @@
+/*
+* Custom CSS for UoK
+*/
+h1.brand {
+	border-bottom: 1px solid #000;
+}
+
+.main_nav a.active {
+  	background: #1477CB;
+	border-bottom: 2px solid #111166;
+	border-right: 1px solid #111166;
+	border-top: 1px solid #FFF;
+	border-left: 1px solid #FFF;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 11pt;
+	text-shadow: 1px 1px #111166;
+}
+
+.main_nav a {
+	background: #1B6DB6;
+	border-bottom: 1px solid #111166;
+	color: #FFF;
+}
+
+.sidebar h4 {
+    margin-left: 14px;
+    color: #FFF;
+}
+
+.sidebar .nav-tabs {
+    margin-top: -34px;
+}
+
+.nav li a {
+
+}
+
+.nav li.active a {
+    color: #6A6A6A;
+	font-size: 11pt;
+}
+
+.sidebar .nav-tabs li.active a {
+    background-color: #edf9ff;
+color: #666;
+	font-weight: bold;
+
+}
+
+.sidebar {
+    background: #11569F;
+}
+
+.sidebar .switcher_bar {
+    text-shadow: none;
+}
+
+.sidebar .switcher_bar a.dropdown-toggle {
+  border: 1px solid #6A6A6A;
+}
+
+.sidebar .switcher_bar a.dropdown-toggle:hover {
+  text-decoration: none;
+  background-color: #CEF;
+}
+
+#container {
+	background: url(/static/dashboard/img/dell_power.gif) no-repeat bottom right;
+	padding-bottom: 70px;
+}
+
+
+
+

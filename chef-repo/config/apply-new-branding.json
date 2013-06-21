@@ -1,0 +1,3 @@
+{
+  "run_list": [ "recipe[rebrand_openstack::apply_new_branding]" ]
+}
