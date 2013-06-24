@@ -23,5 +23,5 @@ service "haproxy" do
 end
 
 package "haproxy" do
-	action :remove
+	action :purge
 end
