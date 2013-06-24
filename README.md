@@ -3,24 +3,7 @@ HA-OpenStack
 
 High-availability implementation of Nova OpenStack based on Grizzly release.
 
-
-
-At a high level, the following is a list of focus areas:
-
-Stage 1 - Core Infrastructure
-
-Rabbit Active/Passive
-Database Redundancy (could be A/P or A/A)
-API Load Balanced (could be A/P or A/A)
-          
-Stage 2 - Keystone high-availability
-Stage 3 - Glance high-availability
-Stage 4 - Openstack Networking high-availability
-Stage 5 – Compute (Nova)
-Stage 6 – Dashboard (Horizon)
-Stage 7 – Hardware
-
-
+At a high level, the following is a list of focus areas: Core Infrastructure, Keystone high-availability, Glance high-availability, Openstack Networking high-availability, Compute (Nova), Dashboard (Horizon), Hardware
 
 The architecture is designed to be modular and addresses the issues of high-availability and scale across the entire Nova platform using a combination of software, hardware and configuration. The scopes of the architectural requirements are narrow and enterprise focused. We do not attempt to deliver “Amazon-scale” architecture but focus primarily on an architecture that is in alignment with the requirements of small, medium and large enterprises. 
 
