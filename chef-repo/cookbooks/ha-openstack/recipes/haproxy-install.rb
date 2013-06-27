@@ -22,26 +22,14 @@ package "haproxy" do
 	action :install
 end
 
-#apply configuration
-#template "/etc/haproxy/haproxy.cfg" do
-#	source "haproxy.cfg.erb"
-#	owner "root"
-#	group "root"
-#	mode 0644
-#	notifies :restart, "service[haproxy]"
-#end
+template "/etc/haproxy/haproxy.cfg" do
+	source "haproxy.cfg.erb"
+	owner "root"
+	group "root"
+	mode 0644
+	notifies :restart, "service[haproxy]"
+end
 
 service "haproxy" do
 	action [:enable, :start]
 end
-
-#register service to run at startup
-#template "haproxy" do
-#  	path "/etc/init.d/haproxy"
-#  	source "haproxy.erb"
-#  	owner "root"
-#  	group "root"
-#  	mode "0755"
-#  	notifies :enable, "service[haproxy]"
-#  	notifies :start, "service[haproxy]"
-#end
