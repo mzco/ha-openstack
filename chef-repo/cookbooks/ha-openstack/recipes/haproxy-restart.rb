@@ -18,7 +18,10 @@
 #
 
 
-service "haproxy" do
-	action [:restart]
-end
+if ::File.exists?("/etc/init.d/haproxy")
 
+	service "haproxy" do
+		action [:restart]
+	end
+
+end

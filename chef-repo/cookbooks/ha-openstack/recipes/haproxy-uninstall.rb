@@ -17,11 +17,14 @@
 # limitations under the License.
 #
 
+if ::File.exists?("/etc/init.d/haproxy")
 
-service "haproxy" do
-	action [:stop, :disable]
-end
+	service "haproxy" do
+		action [:stop, :disable]
+	end
 
-package "haproxy" do
-	action :purge
+	package "haproxy" do	
+		action :purge
+	end
+
 end
