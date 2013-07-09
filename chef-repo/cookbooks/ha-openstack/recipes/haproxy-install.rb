@@ -26,10 +26,20 @@ template "/etc/haproxy/haproxy.cfg" do
 	source "haproxy.cfg.erb"
 	owner "root"
 	group "root"
-	mode 0644
+	mode 0755
+	notifies :restart, "service[haproxy]"
+end
+
+template '/etc/default/haproxy' do
+  	source 'haproxy.init.erb'
+  	owner "root"
+  	group "root"
+  	mode "0755"
 	notifies :restart, "service[haproxy]"
 end
 
 service "haproxy" do
-	action [:enable, :start]
+  	supports :restart => true, :reload => true
+  	action [:enable, :start]
 end
+
