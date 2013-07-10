@@ -17,14 +17,19 @@
 # limitations under the License.
 #
 
+
+# check whether already installed
 if ::File.exists?("/etc/init.d/haproxy")
 
+	# stop and disable proxy
 	service "haproxy" do
 		action [:stop, :disable]
 	end
 
+	# purge packages
 	package "haproxy" do	
-		action :purge
+		action :remove
 	end
 
 end
+

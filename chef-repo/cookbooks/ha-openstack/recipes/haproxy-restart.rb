@@ -18,8 +18,10 @@
 #
 
 
+# check whether already installed
 if ::File.exists?("/etc/init.d/haproxy")
 
+	# restart service if running
 	service "haproxy" do
 		action [:restart]
 	end
